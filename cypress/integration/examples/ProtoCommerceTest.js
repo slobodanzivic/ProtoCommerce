@@ -15,8 +15,12 @@ describe('ProtoCommerce Test', function () {
     })
 
     it('Successful filling the form', function () {
-        homePage.getName().type('Slobodan').should('have.value', 'Slobodan')
-        homePage.getEmail().type('slobodan.m.zivic@gmail.com').should('have.value', 'slobodan.m.zivic@gmail.com')
+        //homePage.getName().type('Slobodan').should('have.value', 'Slobodan')
+        homePage.fillName('Slobodan').should('have.value', 'Slobodan')
+        
+        //homePage.getEmail().type('slobodan.m.zivic@gmail.com').should('have.value', 'slobodan.m.zivic@gmail.com')
+        homePage.fillEmail('slobodan.m.zivic@gmail.com').should('have.value', 'slobodan.m.zivic@gmail.com')
+        
         homePage.getPassword().type('Test123456').should('have.value', 'Test123456')
         homePage.getCheckBox().click()
         homePage.getGender().select('Male').should('have.value', 'Male')

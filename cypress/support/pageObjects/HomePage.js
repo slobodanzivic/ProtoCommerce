@@ -4,8 +4,24 @@ class HomePage {
         return cy.get('input[name="name"]:nth-child(2)')
     }
 
+    fillName(nameValue)
+    {
+        const field = cy.get('input[name="name"]:nth-child(2)')
+        field.clear()
+        field.type(nameValue)
+        return field   
+    }
+
     getEmail() {
         return cy.get('input[name="email"]')
+    }
+
+    fillEmail(emailValue)
+    {
+        const field = cy.get('input[name="email"]')
+        field.clear()
+        field.type(emailValue)
+        return field
     }
 
     getPassword() {
