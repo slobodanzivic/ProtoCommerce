@@ -15,22 +15,31 @@ describe('ProtoCommerce Test', function () {
     })
 
     it('Successful filling the form', function () {
-        //homePage.getName().type('Slobodan').should('have.value', 'Slobodan')
+
         homePage.fillName('Slobodan').should('have.value', 'Slobodan')
-        
-        //homePage.getEmail().type('slobodan.m.zivic@gmail.com').should('have.value', 'slobodan.m.zivic@gmail.com')
+
+
         homePage.fillEmail('slobodan.m.zivic@gmail.com').should('have.value', 'slobodan.m.zivic@gmail.com')
-        
-        homePage.getPassword().type('Test123456').should('have.value', 'Test123456')
-        homePage.getCheckBox().click()
-        homePage.getGender().select('Male').should('have.value', 'Male')
-        homePage.getEmploymentStatus().check().should('be.checked')
-        homePage.getSubmitBtn().click()
+
+
+        homePage.fillPassword('Test123456').should('have.value', 'Test123456')
+
+
+        homePage.getCheckBoxAndClick()
+
+
+        homePage.selectGender().should('have.value', 'Male')
+
+
+        homePage.getEmploymentStatus().should('be.checked')
+
+
+        homePage.clickOnSubmitBtn()
 
     })
 
     it('Whether the same input value is in the next fields "Name" and "Two-way Data Binding example"', function () {
-        homePage.getName().type('Slobodan').should('have.value', 'Slobodan')
+        homePage.fillName('Slobodan').should('have.value', 'Slobodan')
         homePage.getTwoWayDataBinding().should('have.value', 'Slobodan')
     })
 
@@ -43,7 +52,7 @@ describe('ProtoCommerce Test', function () {
     })
 
     it('Page title', function () {
-        cy.title().should('equal', 'ProtoCommerce')
+        homePage.checkTitlePage().should('equal', 'ProtoCommerce')
     })
 })
 

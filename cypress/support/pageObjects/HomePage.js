@@ -4,52 +4,52 @@ class HomePage {
         return cy.get('input[name="name"]:nth-child(2)')
     }
 
-    fillName(nameValue)
-    {
+    fillName(nameValue) {
         const field = cy.get('input[name="name"]:nth-child(2)')
         field.clear()
         field.type(nameValue)
-        return field   
+        return field
     }
 
-    getEmail() {
-        return cy.get('input[name="email"]')
-    }
-
-    fillEmail(emailValue)
-    {
+    fillEmail(emailValue) {
         const field = cy.get('input[name="email"]')
         field.clear()
         field.type(emailValue)
         return field
     }
 
-    getPassword() {
-        return cy.get('input[type="password"]')
+    fillPassword(passwordValue) {
+        const field = cy.get('input[type="password"]')
+        field.clear()
+        field.type(passwordValue)
+        return field
     }
 
-    getCheckBox() {
-        return cy.get('input#exampleCheck1')
+    getCheckBoxAndClick() {
+        return cy.get('input#exampleCheck1').click()
     }
 
-    getGender() {
-        return cy.get('select#exampleFormControlSelect1')
+    selectGender() {
+        const gender = cy.get('select#exampleFormControlSelect1')
+        gender.select('Male')
+        return gender
     }
 
     getEmploymentStatus() {
-        return cy.get('input#inlineRadio2')
+        const status = cy.get('input#inlineRadio2')
+        status.check()
+        return status
     }
 
-    getEntrepreneur() {
-        return cy.get('input#inlineRadio3')
-    }
-
-    getSubmitBtn() {
-        return cy.get('input[type="submit"]')
+    clickOnSubmitBtn() {
+        const submit = cy.get('input[type="submit"]')
+        submit.click()
+        return submit
     }
 
     getTwoWayDataBinding() {
-        return cy.get('input[name="name"]:nth-child(1)')
+        const value = cy.get('input[name="name"]:nth-child(1)')
+        return value
     }
 
     getAlertMessage() {
@@ -57,8 +57,19 @@ class HomePage {
 
     }
 
-    getShopBtn() {
-        return cy.get('ul.navbar-nav li:nth-child(2)')
+    getEntrepreneur() {
+        return cy.get('input#inlineRadio3')
+    }
+
+    checkTitlePage() {
+        const titleText = cy.title()
+        return titleText
+    }
+
+    clickOnShopBtn() {
+        const shopBtn = cy.get('ul.navbar-nav li:nth-child(2)')
+        shopBtn.click()
+        return shopBtn
     }
 
 }
