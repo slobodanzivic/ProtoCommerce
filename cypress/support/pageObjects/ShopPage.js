@@ -22,7 +22,6 @@ class ShopPage {
     productNameInTheCart() {
         return cy.get('h4.media-heading a')
 
-
     }
 
     clickOnRemoveBtn() {

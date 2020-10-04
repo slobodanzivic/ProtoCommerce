@@ -7,6 +7,9 @@ describe('Shop Test', function () {
 
     beforeEach(() => {
         cy.visit(Cypress.env('url'))
+        cy.fixture('example').then(function (data) {
+            this.data = data
+        })
     })
 
     it('Go to shop', function () {
@@ -63,5 +66,16 @@ describe('Shop Test', function () {
         shopPage.clickOnCheckBox()
         shopPage.clickOnPurchaseBtn()
         shopPage.validateAlertMessage()
+    })
+
+    it('Adding multiple product to the cart', function () {
+        shopPage.clickOnShopBtn()
+        this.data.productName.forEach(function(element){
+            cy.selectProduct(element)
+        })
+        shopPage.clickOnCheckoutBtn()
+        shopPage.productNameInTheCart().should('have.length', '3')
+      
+
     })
 })
