@@ -6,7 +6,7 @@ describe('Shop Test', function () {
     const shopPage = new ShopPage()
 
     beforeEach(() => {
-        cy.visit('https://rahulshettyacademy.com/angularpractice/')
+        cy.visit(Cypress.env('url'))
     })
 
     it('Go to shop', function () {

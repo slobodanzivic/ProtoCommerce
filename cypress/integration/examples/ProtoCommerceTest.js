@@ -6,7 +6,7 @@ describe('ProtoCommerce Test', function () {
     const homePage = new HomePage()
 
     beforeEach(() => {
-        cy.visit('https://rahulshettyacademy.com/angularpractice/')
+        cy.visit(Cypress.env('url'))
     })
 
     it('Visit the https://rahulshettyacademy.com/angularpractice/ ', function () {
