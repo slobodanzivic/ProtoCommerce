@@ -59,5 +59,12 @@ class ShopPage {
         return cy.get('input[value="Purchase"]').click()
     }
 
+    validateAlertMessage() {
+        cy.get('.alert').then(function (element) {
+            const actualText = element.text()
+            expect(actualText.includes("Success")).to.be.true
+        })
+    }
+
 }
 export default ShopPage;

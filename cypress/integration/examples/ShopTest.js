@@ -62,9 +62,6 @@ describe('Shop Test', function () {
         shopPage.clickOnChosenCountry()
         shopPage.clickOnCheckBox()
         shopPage.clickOnPurchaseBtn()
-        cy.get('.alert').then(function (element) {
-            const actualText = element.text()
-            expect(actualText.includes("Success")).to.be.true
-        })
+        shopPage.validateAlertMessage()
     })
 })
