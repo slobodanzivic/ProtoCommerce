@@ -4,7 +4,12 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "node_modules//.bin/cypress run",
+    "headedTest": "node_modules//.bin//cypress run --headed",
+    "chromeTest": "npm run test -- --browser chrome",
+    "chromiumTest": "npm run test -- --browser chromium",
+    "firefoxTest": "npm run test -- --browser firefox",
+    "recordDashboardTest": "npm run test -- --record --key 617c8520-ce70-4955-aafc-a55da84893e2"
   },
   "author": "Slobodan Zivic",
   "license": "ISC",
