@@ -9,7 +9,9 @@
     "chromeTest": "npm run test -- --browser chrome",
     "chromiumTest": "npm run test -- --browser chromium",
     "firefoxTest": "npm run test -- --browser firefox",
-    "recordDashboardTest": "npm run test -- --record --key 617c8520-ce70-4955-aafc-a55da84893e2"
+    "recordDashboardTest": "npm run test -- --record --key 617c8520-ce70-4955-aafc-a55da84893e2",
+    "ProtoCommerceTest": "npx cypress run  --spec \"cypress/integration/examples/ProtoCommerceTest.js\"",
+    "ShopTest": "npx cypress run  --spec \"cypress/integration/examples/ShopTest.js\""
   },
   "author": "Slobodan Zivic",
   "license": "ISC",
