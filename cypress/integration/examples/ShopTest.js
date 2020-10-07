@@ -74,9 +74,37 @@ describe('Shop Test', function () {
             cy.selectProduct(element)
         })
         shopPage.clickOnCheckoutBtn()
-        shopPage.productNameInTheCart().should('have.length', '3')
-        
-
+        shopPage.productNameInTheCart().should('have.length', '2')
 
     })
+
+    it('Sum of 2 products', function () {
+        shopPage.clickOnShopBtn()
+        this.data.productName.forEach(function (element) {
+            cy.selectProduct(element)
+        })
+        shopPage.clickOnCheckoutBtn()
+
+        var sum = 0
+
+        cy.get('tr td:nth-child(4) strong').each(($el, index, $list) => {
+            const amount = $el.text()
+            let result = amount.split(" ")
+            result = result[1].trim()
+            sum = Number(sum) + Number(result)
+        }).then(function () {
+            cy.log(sum)
+        })
+
+        cy.get('h3 strong').then(function (element) {
+            const amount = element.text()
+            let result = amount.split(" ")
+            let total = result[1].trim()
+
+            expect(Number(total)).to.equal(sum)
+        })
+    })
 })
+
+
+

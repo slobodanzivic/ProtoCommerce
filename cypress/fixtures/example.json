@@ -4,7 +4,6 @@
   "body": "Fixtures are a great way to mock data for responses to routes",
   "productName": [
     "Blackberry",
-    "Nokia Edge",
-    "iphone X"
+    "Nokia Edge"
   ]
 }
