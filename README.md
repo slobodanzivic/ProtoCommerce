@@ -3,7 +3,7 @@
 #### Version 1.0.0
 
 ## Description
-#### ProtoCommerce is used for testing some different functionalities. There are 12 tests in this project.
+#### ProtoCommerce is used for testing some different functionalities. There are 14 tests in this project.
 * ProtoCommerceTest contains 6 tests:
     * Visit the https://rahulshettyacademy.com/angularpractice/ 
     * Successful filling the form
@@ -12,7 +12,7 @@
     * Whether the input field has a value of minlength 2
     * Page title
 
-* ShopTest contains 7 tests:
+* ShopTest contains 8 tests:
     * Go to shop
     * Adding Blackberry to cart
     * Select Product
@@ -20,6 +20,7 @@
     * Remove product from cart
     * Remove product from cart and Continue Shoping
     * Adding multiple products to the cart
+    * Sum of 2 products
 
 #### Target application URL is: https://rahulshettyacademy.com/angularpractice/
 ---
