@@ -52,7 +52,7 @@
 * package.json
 * package-lock.json
 
-## Package Cypress contains 6 folders:
+## Package `Cypress` contains 6 folders:
 * fixtures
 * integration
 * plugins
@@ -60,12 +60,12 @@
 * support
 * videos   
 
-## Folder Integration contains:
+## Folder `Integration` contains:
 * examples folder
     * ProtoCommerceTest.js
     * ShopTest.js
 
-## Folder Support contains:
+## Folder `Support` contains:
 * pageObjects folder
     * HomePage.js
     * ShopPage.js
@@ -77,7 +77,7 @@
 ## Cypress `Dashboard`
 [Cypress Dashboard](https://dashboard.cypress.io/projects/fam1np/runs/2/specs)
 
-## Cypress Video
+## Cypress `Video`
 [Cypress Video ProtoCommerceTest](https://dashboard.cypress.io/projects/fam1np/runs/2/specs/08692aef-6c9d-4a07-8cf9-6cd4562be611/video)
 
 [Cypress Video ShopTest](https://dashboard.cypress.io/projects/fam1np/runs/2/specs/f898165f-69a0-4150-95fe-86c3be1dd942/video)
