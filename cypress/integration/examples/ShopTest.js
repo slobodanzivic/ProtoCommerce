@@ -88,8 +88,8 @@ describe('Shop Test', function () {
         var sum = 0
 
         cy.get('tr td:nth-child(4) strong').each(($el, index, $list) => {
-            const amount = $el.text()
-            let result = amount.split(" ")
+            const price = $el.text()
+            let result = price.split(" ")
             result = result[1].trim()
             sum = Number(sum) + Number(result)
         }).then(function () {
@@ -97,11 +97,12 @@ describe('Shop Test', function () {
         })
 
         cy.get('h3 strong').then(function (element) {
-            const amount = element.text()
-            let result = amount.split(" ")
-            let total = result[1].trim()
+            const price = element.text()
+            let result = price.split(" ")
+            let totalSum = result[1].trim()
+            cy.log(totalSum)
 
-            expect(Number(total)).to.equal(sum)
+            expect(Number(totalSum)).to.equal(sum)
         })
     })
 })
